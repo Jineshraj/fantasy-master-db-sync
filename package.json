@@ -1,0 +1,27 @@
+{
+  "name": "fantasy-master-db-sync",
+  "version": "1.0.0",
+  "description": "Synchronization service that imports player, club and position data from Transfermarkt into a single Google Sheets Master Player Database for a Fantasy Football application.",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "sync": "ts-node src/cli.ts",
+    "sync:dry": "ts-node src/cli.ts --dry-run",
+    "debug:club": "ts-node scripts/debugClubSquad.ts",
+    "start": "node dist/cli.js",
+    "postinstall": "echo 'Run: npx playwright install chromium'"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "googleapis": "^140.0.1",
+    "playwright": "^1.46.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

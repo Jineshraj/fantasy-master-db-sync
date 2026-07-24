@@ -6,3 +6,4 @@ dist/
 .tmp/
 .codex/
 credentials/*.json
+SESSION_RUNBOOK.md
